@@ -1,0 +1,88 @@
+is even..:
+
+public class Main {
+    public static void main(String[] args) {
+        int number = 8;
+        int result = isEven(number);
+        System.out.println(result);
+    }
+
+    public static int isEven(int number) {
+        if (number % 2 == 0) {
+            return 2;
+        } else {
+            return 1;
+        }
+    }
+}
+
+
+is odd..:
+
+public class Main {
+    public static void main(String[] args) {
+        int number = 11;
+        int result = isOdd(number);
+        System.out.println(result);
+    }
+
+    public static int isOdd(int number) {
+        if (number % 2 != 0) {
+            return 2;
+        } else {
+            return 1;
+        }
+    }
+}
+
+return last digit of the given number:
+
+public class Main {
+    public static void main(String[] args) {
+        int number = 197;
+        int lastDigit = getLastDigit(number);
+        System.out.println(lastDigit);
+    }
+
+    public static int getLastDigit(int number) {
+        return Math.abs(number % 10);
+    }
+}
+
+
+second last digit of the given number:
+
+public class Main {
+    public static void main(String[] args) {
+        int number = 197;
+        int secondLastDigit = getSecondLastDigit(number);
+        System.out.println(secondLastDigit);
+    }
+
+    public static int getSecondLastDigit(int number) {
+        if (Math.abs(number) < 10) {
+            return -1;
+        } else {
+            number = Math.abs(number / 10);
+            return number % 10;
+        }
+    }
+}
+
+
+sum of last digit of two numbers:
+
+public class Main {
+    public static void main(String[] args) {
+        int number1 = 267;
+        int number2 = 154;
+        int sumOfLastDigits = addLastDigits(number1, number2);
+        System.out.println(sumOfLastDigits);
+    }
+
+    public static int addLastDigits(int input1, int input2) {
+        int lastDigit1 = Math.abs(input1 % 10);
+        int lastDigit2 = Math.abs(input2 % 10);
+        return lastDigit1 + lastDigit2;
+    }
+}
